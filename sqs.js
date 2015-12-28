@@ -72,7 +72,7 @@ function test() {
       }
       if (message) {
         if (message.Body === contents) {
-          removeSQS(defaultQueueUrl, message, function(err, data) {
+          removeSQS(message, defaultQueueUrl, function(err, data) {
             console.log("Deleted message");
           });
           return;
